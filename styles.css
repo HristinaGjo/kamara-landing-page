@@ -112,15 +112,24 @@ img{
     gap: 2em;
 }
 
-.pagination{
-    position: absolute;
+/*.pagination{
+    position: fixed;
     width: 8em;
     bottom: -17em;
     left:80em;
     color: white;
     display: flex;
     align-items: center;
-   /* background: red; */
+} */
+
+.pagination {
+    position: absolute; /* Change to absolute */
+    bottom: -280px; /* Adjust according to your desired vertical position */
+    right: -50%; /* Adjust according to your desired horizontal position */
+    transform: translateX(-50%); /* Center horizontally */
+    color: red;
+    display: flex;
+    align-items: center;
 }
 
 .line{

@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sliderContent = [
         {
+            title: "Echoes",
+            images: [
+                "./assets/echoes-1.jpg",
+                "./assets/echoes-2.jpg"
+            ]
+        },
+        {
             title: "Odyssey",
             images: [
                 "./assets/odyssey-1.jpg",
@@ -27,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let activeSlide = 0;
 
     function createNewSlide(index) {
-        const slideTheme = index % 2 ? "dark" : "light";
+        const slideTheme = index % 2  ? "light" : "dark";
         const slideData = sliderContent[index];
 
         const newSlide = document.createElement("div");
@@ -48,11 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
         newSlideContent.innerHTML = `
             <h1>${slideData.title}</h1>
             <div class="pagination">
-                <span class="current-slide">${index + 2}</span>
+                <span class="current-slide">${index + 1}</span>
                 <div class="line">
                     <hr/>
                 </div>
-                <span class="total-slides">${sliderContent.length + 1}</span>
+                <span class="total-slides">${sliderContent.length}</span>
             </div>
         `;
         newSlide.appendChild(newSlideContent);
@@ -103,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         gsap.fromTo(newSlide.querySelector("h1"), {
-            scale: 1.3
+            scale: 1.5
         }, {
             scale: 1,
             duration: 1.5,
