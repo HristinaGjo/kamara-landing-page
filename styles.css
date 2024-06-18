@@ -30,6 +30,7 @@ img{
     /*background: rgb(42, 77, 148);*/
    /* background: rgb(42, 66, 113);*/
     background: rgb(25, 42, 76);
+   /* background: #dbdbdb;*/
     overflow: hidden;
 }
 
@@ -42,7 +43,7 @@ img{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+ 
 }
 
 .slide-content h1{
@@ -57,25 +58,9 @@ img{
 }
 
 
-/* .slide-content .pagination {
-    color: black;
-}
-
-.slide.dark .pagination {
-    color: white;
-}
-
-.pagination hr {
-    color: white;
-}
-
-.pagination hr {
-    color: black;
-} */
-
 .slide-img{
     position: absolute;
-    width: 300px;
+    width: 250px;
     height: 150vh;
     /* filter: saturate(0); */
 }
@@ -84,7 +69,7 @@ img{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width:300px;
+    width:250px;
     height: 600px;
 }
 
@@ -120,12 +105,6 @@ img{
 }
 
 
-/*.description{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .rightCtn{
     display: flex;
     flex-direction: row;
@@ -134,44 +113,43 @@ img{
     gap: 2em;
 }
 
-/*.pagination{
-    position: fixed;
-    width: 8em;
-    bottom: -17em;
-    left:80em;
-    color: white;
-    display: flex;
-    align-items: center;
-} */
 
-.pagination {
-    position: absolute; /* Change to absolute */
-    bottom: -280px; /* Adjust according to your desired vertical position */
-    left: 120%; /* Adjust according to your desired horizontal position */
-    transform: translateX(-50%); /* Center horizontally */
-    color: white;
-    display: flex;
-    align-items: center;
-}
 
-.line{
+
+/* .line{
     width: 80px;
     height: 1px;
     border: none;
     color: white;
     margin: 0 1em;
-}
+} */
 
-/* Default styles */
+
+/* Default styles 
 .navbarCtn,
 .pagination {
     color: white;
 }
 
-/* Styles for light theme */
+/* Styles for light theme 
 .navbarCtn.light-theme,
 .pagination.light-theme {
     color: black;
-}
+} */
 
 
+/*.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/*.pagination {
+    position: absolute;
+    bottom: -280px; 
+    left: 120%; 
+    transform: translateX(-50%); 
+    color: white;
+    display: flex;
+    align-items: center;
+} */
