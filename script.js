@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         },
         {
-            title: "Wasteland",
+            title: "Dystopia",
             images: [
                 "./assets/wasteland-1.jpg",
                 "./assets/wasteland-2.jpg"
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const slider = document.querySelector(".slider");
+    
     let activeSlide = 0;
 
     function createNewSlide(index) {
@@ -54,13 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         newSlideContent.classList.add("slide-content");
         newSlideContent.innerHTML = `
             <h1>${slideData.title}</h1>
-            <div class="pagination">
-                <span class="current-slide">${index + 1}</span>
-                <div class="line">
-                    <hr/>
-                </div>
-                <span class="total-slides">${sliderContent.length}</span>
-            </div>
+          
         `;
         newSlide.appendChild(newSlideContent);
 
@@ -74,6 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         return newSlide;
     }
+
+
 
     slider.addEventListener("click", function () {
         const currentSlide = slider.querySelector(".slide:not(.exiting)");
@@ -124,3 +121,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+
+
+/*   <div class="pagination">
+<span class="current-slide">${index + 1}</span>
+<div class="line">
+    <hr/>
+</div>
+<span class="total-slides">${(sliderContent.length-1) + 1}</span>
+</div> */
