@@ -29,8 +29,9 @@ img{
     /*background: rgb(107, 111, 139);*/
     /*background: rgb(42, 77, 148);*/
    /* background: rgb(42, 66, 113);*/
-    background: rgb(25, 42, 76);
+    /*background: rgb(25, 42, 76);*/
    /* background: #dbdbdb;*/
+    background: linear-gradient(to right, #ff5858, #f857a6);
     overflow: hidden;
 }
 
@@ -112,6 +113,8 @@ img{
     align-items: center;
     gap: 2em;
 }
+
+
 
 
 
