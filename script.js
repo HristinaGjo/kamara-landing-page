@@ -15,16 +15,6 @@ document.addEventListener ("DOMContentLoaded", function(){
     let activeSlide = 0;
 
 
-    const currentSlideSpan = document.querySelector(".current-slide");
-    const totalSlidesSpan = document.querySelector(".total-slides");
-
-
-    function updatePagination(current, total) {
-        currentSlideSpan.textContent = current;
-        totalSlidesSpan.textContent = total;
-    }
-
-    updatePagination(activeSlide + 1, sliderContent.length);
 
     document.addEventListener ("click", function(){
         const currentSlide = slider.querySelector(".slide:not(.exiting)");
@@ -57,9 +47,17 @@ document.addEventListener ("DOMContentLoaded", function(){
 
         const newSlideContent = document.createElement ("div");
         newSlideContent.classList.add ("slide-content");
-        newSlideContent.innerHTML = `<h1> ${sliderContent[activeSlide]}</h1>`;
+        newSlideContent.innerHTML = `<h1> ${sliderContent[activeSlide]}</h1>;
+            <div class="pagination">
+                <span class="current-slide">${activeSlide + 1}</span>
+                <div class="line">
+                    <hr/>
+                </div>
+                <span class="total-slides">${sliderContent.length}</span>
+            </div>`
      
         newSlide.appendChild(newSlideContent);
+
 
         const newSlideImg2 = document.createElement("div");
         newSlideImg2.className = "slide-img slide-img-2";
@@ -99,7 +97,7 @@ document.addEventListener ("DOMContentLoaded", function(){
     });
 
     function removeExtraSlide (container) {
-        while (container.children.length > 5){
+        while (container.children.length > 4){
             container.removeChild (container.firstChild)
         }
 

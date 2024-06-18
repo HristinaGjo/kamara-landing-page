@@ -114,13 +114,14 @@ img{
 
 .pagination{
     position: absolute;
-    bottom: 1em;
-    right: 2.5em;
+    width: 8em;
+    bottom: -17em;
+    left:80em;
     color: white;
     display: flex;
     align-items: center;
+   /* background: red; */
 }
-
 
 .line{
     width: 80px;
