@@ -1,15 +1,30 @@
 document.addEventListener ("DOMContentLoaded", function(){
     const sliderContent= [
         "Echoes",
-        "Ethereal",
-        "Neon Void",
-        "Mystics",
+        "Odyssey",
+        "Cracker",
+        "wasteland",
+        //"Ethereal",
+       // "Neon Void",
+      //  "Mystics",
        // "Horizons",
         //"Dystopian"
     ];
 
     const slider = document.querySelector(".slider");
     let activeSlide = 0;
+
+
+    const currentSlideSpan = document.querySelector(".current-slide");
+    const totalSlidesSpan = document.querySelector(".total-slides");
+
+
+    function updatePagination(current, total) {
+        currentSlideSpan.textContent = current;
+        totalSlidesSpan.textContent = total;
+    }
+
+    updatePagination(activeSlide + 1, sliderContent.length);
 
     document.addEventListener ("click", function(){
         const currentSlide = slider.querySelector(".slide:not(.exiting)");
@@ -43,6 +58,7 @@ document.addEventListener ("DOMContentLoaded", function(){
         const newSlideContent = document.createElement ("div");
         newSlideContent.classList.add ("slide-content");
         newSlideContent.innerHTML = `<h1> ${sliderContent[activeSlide]}</h1>`;
+     
         newSlide.appendChild(newSlideContent);
 
         const newSlideImg2 = document.createElement("div");

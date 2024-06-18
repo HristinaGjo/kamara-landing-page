@@ -89,7 +89,7 @@ img{
     align-self:center;
     background:transparent;
     z-index: 100;
-    padding: 1.5em 3em;
+    padding: 1.3em 3em;
     gap: 10em;
 }
 
@@ -97,6 +97,12 @@ img{
     color: white;
     font-size: 1rem;
 }
+
+/*.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 .rightCtn{
     display: flex;
@@ -106,4 +112,20 @@ img{
     gap: 2em;
 }
 
+.pagination{
+    position: absolute;
+    bottom: 1em;
+    right: 2.5em;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+.line{
+    width: 80px;
+    background: white;
+    color: white;
+    margin: 0 1em;
+}
 
