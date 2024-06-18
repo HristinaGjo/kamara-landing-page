@@ -70,6 +70,9 @@ document.addEventListener ("DOMContentLoaded", function(){
 
         slider.appendChild(newSlide);
 
+
+    
+
         gsap.to(newSlide,{
             clipPath: "polygon (0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             duration: 1.5,
