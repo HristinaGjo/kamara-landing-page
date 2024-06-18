@@ -4,8 +4,8 @@ document.addEventListener ("DOMContentLoaded", function(){
         "Ethereal",
         "Neon Void",
         "Mystics",
-        "Horizons",
-        "Dystopian"
+       // "Horizons",
+        //"Dystopian"
     ];
 
     const slider = document.querySelector(".slider");
@@ -34,20 +34,22 @@ document.addEventListener ("DOMContentLoaded", function(){
         const newSlideImg1 = document.createElement("div");
         newSlideImg1.className = "slide-img slide-img-1";
         const img1 = document.createElement("img");
-        img1.src = `./assets/slider-${activeSlide + 1}-1.jpg`;
+        //img1.src = `./assets/slider-${activeSlide + 1}-1.jpg`;
+        img1.src = `./assets/sci-fi-2.jpg`;
         img1.style.top = "100%";
         newSlideImg1.appendChild(img1);
         newSlide.appendChild(newSlideImg1);
 
         const newSlideContent = document.createElement ("div");
         newSlideContent.classList.add ("slide-content");
-        newSlideContent.innerHTML = `<h1 style="scale 1:5"> ${sliderContent[activeSlide]}<h1/>`;
+        newSlideContent.innerHTML = `<h1> ${sliderContent[activeSlide]}</h1>`;
         newSlide.appendChild(newSlideContent);
 
         const newSlideImg2 = document.createElement("div");
         newSlideImg2.className = "slide-img slide-img-2";
         const img2 = document.createElement("img");
-        img2.src = `./assets/slider-${activeSlide + 1}-2.jpg`;
+        // img2.src = `./assets/slider-${activeSlide + 1}-2.jpg`;
+        img2.src = `./assets/sci-fi-1.jpg`;
         img2.style.top = "100%";
         newSlideImg2.appendChild(img2);
         newSlide.appendChild(newSlideImg2);
@@ -71,10 +73,12 @@ document.addEventListener ("DOMContentLoaded", function(){
             }
         });
 
-        gsap.to(".slide-content h1", {
-            scale:1,
-            duration:1.5,
-            ease:"power4.inOut"
+        gsap.fromTo(newSlideContent.querySelector("h1"), {
+            scale: 1.3
+        }, {
+            scale: 1,
+            duration: 1.5,
+            ease: "power4.inOut"
         });
     });
 

@@ -44,7 +44,7 @@ img{
 
 .slide-content h1{
     font-family: 'DINRoundPro-Medi', sans-serif;
-    font-size: 15vw;
+    font-size: 12vw;
     text-transform: uppercase;
     color: black;
 }
@@ -55,7 +55,7 @@ img{
 
 .slide-img{
     position: absolute;
-    width: 250px;
+    width: 300px;
     height: 150vh;
     /* filter: saturate(0); */
 }
@@ -64,7 +64,7 @@ img{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 250px;
+    width:300px;
     height: 600px;
 }
 
@@ -79,4 +79,31 @@ img{
     left: 50%;
     transform: translate(-50%, -50%) rotate(20deg);
 }
+
+.navbarCtn{
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-self:center;
+    align-self:center;
+    background:transparent;
+    z-index: 100;
+    padding: 1.5em 3em;
+    gap: 10em;
+}
+
+.navbarCtn span{
+    color: white;
+    font-size: 1rem;
+}
+
+.rightCtn{
+    display: flex;
+    flex-direction: row;
+    justify-content:end;
+    align-items: center;
+    gap: 2em;
+}
+
 
