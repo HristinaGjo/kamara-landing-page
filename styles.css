@@ -191,6 +191,32 @@ span{
 
 @media (max-width: 768px) {
     /* Adjustments for smaller screens */
+    .slide-content {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .slide-img img {
+        position: absolute;
+        top: 43%;
+        transform: translateY(-43%);
+        width: 250px;
+        height: 600px;
+    }
+    
+    .slide-img-1 {
+        top: 43%;
+        left: 50%;
+        transform: translate(-43%, -50%) rotate(-20deg);
+    }
+    
+    .slide-img-2 {
+        top: 43%;
+        left: 50%;
+        transform: translate(-43%, -50%) rotate(20deg);
+    }
 
     .navbarCtn {
         padding: 1em; /* Adjust padding for spacing */
