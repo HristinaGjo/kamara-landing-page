@@ -67,6 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
         newSlideImg2.appendChild(img2);
         newSlide.appendChild(newSlideImg2);
 
+          // Add pagination element
+          const pagination = document.createElement("div");
+          pagination.classList.add("pagination");
+          pagination.innerHTML = `
+              <span class="current-slide">${index + 1}</span>
+              <div class="line"><hr/></div>
+              <span class="total-slides">${sliderContent.length}</span>
+          `;
+          newSlide.appendChild(pagination);
+
+
         return newSlide;
     }
 

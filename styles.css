@@ -115,6 +115,27 @@ img{
 }
 
 
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    right: 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.pagination .line {
+    width: 60px;
+    height: 1px;
+    background-color: white;
+    margin: 0 16px;
+}
+
+
+
+
+
+
 
 
 
