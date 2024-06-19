@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let activeSlide = 0;
 
     function createNewSlide(index) {
-        const slideTheme = index % 2  ? "light" : "dark";
+        const slideTheme = index % 2 ? "light" : "dark";
         const slideData = sliderContent[index];
 
         const newSlide = document.createElement("div");
@@ -53,10 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const newSlideContent = document.createElement("div");
         newSlideContent.classList.add("slide-content");
-        newSlideContent.innerHTML = `
-            <h1>${slideData.title}</h1>
-          
-        `;
+        newSlideContent.innerHTML = `<h1>${slideData.title}</h1>`;
         newSlide.appendChild(newSlideContent);
 
         const newSlideImg2 = document.createElement("div");
@@ -67,21 +64,47 @@ document.addEventListener("DOMContentLoaded", function () {
         newSlideImg2.appendChild(img2);
         newSlide.appendChild(newSlideImg2);
 
-          // Add pagination element
-          const pagination = document.createElement("div");
-          pagination.classList.add("pagination");
-          pagination.innerHTML = `
-              <span class="current-slide">${index + 1}</span>
-              <div class="line"><hr/></div>
-              <span class="total-slides">${sliderContent.length}</span>
-          `;
-          newSlide.appendChild(pagination);
-
+        // Add pagination element
+        const pagination = document.createElement("div");
+        pagination.classList.add("pagination");
+        pagination.innerHTML = `
+            <span class="current-slide">${index + 1}</span>
+            <div class="line"><hr/></div>
+            <span class="total-slides">${sliderContent.length}</span>
+        `;
+        newSlide.appendChild(pagination);
 
         return newSlide;
     }
 
+    function initializeSlider() {
+        const initialSlide = createNewSlide(activeSlide);
+        slider.appendChild(initialSlide);
 
+        const img1 = initialSlide.querySelector(".slide-img-1 img");
+        const img2 = initialSlide.querySelector(".slide-img-2 img");
+
+        gsap.to(initialSlide, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            duration: 1.5,
+            ease: "power4.inOut",
+            onStart: () => {
+                gsap.to([img1, img2], {
+                    top: "50%",
+                    duration: 1.5,
+                    ease: "power4.inOut"
+                });
+            }
+        });
+
+        gsap.fromTo(initialSlide.querySelector("h1"), {
+            scale: 1.5
+        }, {
+            scale: 1,
+            duration: 1.5,
+            ease: "power4.inOut"
+        });
+    }
 
     slider.addEventListener("click", function () {
         const currentSlide = slider.querySelector(".slide:not(.exiting)");
@@ -131,14 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
             container.removeChild(container.firstChild);
         }
     }
+
+    // Initialize the slider with the first slide
+    initializeSlider();
 });
-
-
-
-/*   <div class="pagination">
-<span class="current-slide">${index + 1}</span>
-<div class="line">
-    <hr/>
-</div>
-<span class="total-slides">${(sliderContent.length-1) + 1}</span>
-</div> */
