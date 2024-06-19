@@ -12,6 +12,13 @@ html, body {
     overflow: hidden; /* Hide any overflowing content within the main content area */
 }
 
+.element {
+    transform: translate3d(0, 0, 0); /* Apply hardware acceleration */
+    /* or */
+    will-change: transform; /* Indicate to the browser that this element's transform property will change */
+}
+
+
 .preloader,
 .slider,
 .slide,
@@ -190,7 +197,7 @@ span{
 }
 
 @media (max-width: 768px) {
-    /* Adjustments for smaller screens */
+
     .slide-content {
         position: absolute;
         top: 45%;
