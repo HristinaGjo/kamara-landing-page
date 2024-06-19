@@ -1,17 +1,27 @@
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background: black; 
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: black; /* Set background color for the entire page */
 }
 
 #main-content {
-    background-color: black; /* Alternatively, set background color for main content area only */
     min-height: 100%;
+    position: relative; /* Ensure relative positioning for absolute elements */
+    overflow: hidden; /* Hide any overflowing content within the main content area */
 }
 
+.preloader,
+.slider,
+.slide,
+.slide-content,
+.slide-img,
+.pagination,
+.description {
+    max-height: 100vh; /* Limit height to viewport height */
+    overflow: hidden;
+}
 
 * {
     margin: 0;
@@ -179,74 +189,48 @@ span{
     font-weight: 200;
 }
 
-
 @media (max-width: 768px) {
-    
+    /* Adjustments for smaller screens */
+
     .navbarCtn {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1em ; 
-        gap: 1em; 
+        padding: 1em; /* Adjust padding for spacing */
+        gap: 1em; /* Adjust gap between items */
     }
 
-    .rightCtn{
-        gap:1em;
+    .rightCtn {
+        gap: 1em; /* Adjust gap between items */
     }
 
     .pagination {
-        right: 10px;
+        right: 10px; /* Adjust position */
     }
 
     .description {
-        left: 10px;
+        left: 10px; /* Adjust position */
     }
 
     .slide-content h1 {
-        color: white; /* Ensure text color is set */
-        text-transform: uppercase; /* Ensure text transformation if needed */
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        font-size: 3.8em;
+        font-size: 3.8em; /* Adjust font size */
     }
 
     .slide-img {
-        position: absolute;
         width: 150px; /* Adjust width for smaller screens */
         height: 60vh; /* Adjust height for smaller screens */
     }
-    
-    .slide-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
 
     .pagination {
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        color: white;
-        display: flex;
-        align-items: center;
+        right: 20px; /* Adjust position */
     }
-    
+
     .pagination .line {
-        width: 50px;
-        height: 2px;
-        background-color: white;
-        margin: 0 16px;
+        width: 50px; /* Adjust width */
     }
 
-    span{
-        font-size: 14px;
+    span {
+        font-size: 14px; /* Adjust font size */
     }
 
-    .navbarCtn span{
-        font-size: 14px;
+    .navbarCtn span {
+        font-size: 14px; /* Adjust font size */
     }
 }
