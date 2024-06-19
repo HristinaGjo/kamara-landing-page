@@ -7,7 +7,7 @@ html, body {
 }
 
 #main-content {
-    min-height: 100%;
+    height: 100%;
     position: relative; /* Ensure relative positioning for absolute elements */
     overflow: hidden; /* Hide any overflowing content within the main content area */
 }
@@ -203,12 +203,16 @@ span{
 
     .pagination {
         right: 20px; 
-        bottom: 50px;
+        bottom: 100px;
+    }
+
+    .pagination .line {
+        width: 50px; /* Adjust width */
     }
 
     .description {
         left: 20px; /* Adjust position */
-        bottom: 50px;
+        bottom: 100px;
     }
 
     .slide-content h1 {
@@ -218,14 +222,6 @@ span{
     .slide-img {
         width: 150px; /* Adjust width for smaller screens */
         height: 60vh; /* Adjust height for smaller screens */
-    }
-
-    .pagination {
-        right: 20px; /* Adjust position */
-    }
-
-    .pagination .line {
-        width: 50px; /* Adjust width */
     }
 
     span {
