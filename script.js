@@ -72,6 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         newSlide.appendChild(pagination);
 
+         // Add description element
+         const description = document.createElement("div");
+         description.classList.add("description");
+         description.innerHTML = `
+             <span>[photographer]</span>
+         `;
+         newSlide.appendChild(description);
+
         return newSlide;
     }
 
