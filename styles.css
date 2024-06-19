@@ -203,7 +203,7 @@ span{
 
     .pagination {
         right: 20px; 
-        bottom: 100px;
+        bottom: 140px;
     }
 
     .pagination .line {
@@ -212,7 +212,7 @@ span{
 
     .description {
         left: 20px; /* Adjust position */
-        bottom: 100px;
+        bottom: 140px;
     }
 
     .slide-content h1 {
@@ -221,7 +221,7 @@ span{
 
     .slide-img {
         width: 150px; /* Adjust width for smaller screens */
-        height: 60vh; /* Adjust height for smaller screens */
+        height: 50vh; /* Adjust height for smaller screens */
     }
 
     span {
