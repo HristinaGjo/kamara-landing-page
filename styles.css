@@ -175,6 +175,7 @@ span{
 
 
 @media (max-width: 768px) {
+    
     .navbarCtn {
         display: flex;
         flex-direction: row;
