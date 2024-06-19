@@ -202,11 +202,13 @@ span{
     }
 
     .pagination {
-        right: 10px; /* Adjust position */
+        right: 20px; 
+        bottom: 50px;
     }
 
     .description {
-        left: 10px; /* Adjust position */
+        left: 20px; /* Adjust position */
+        bottom: 50px;
     }
 
     .slide-content h1 {
