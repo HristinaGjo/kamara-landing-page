@@ -8,7 +8,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const slider = document.querySelector(".slider");
     let activeSlide = 0;
-    const imagePath = "./assets/"; // Base path for your images
+    const imagePath = "./assets/";
+
+    // Preloader functionality
+    const preloader = document.getElementById("preloader");
+    const loadingText = document.getElementById("loading-text");
+    const content = document.getElementById("content");
+    let loadProgress = 0;
+
+    const simulateLoading = () => {
+        const interval = setInterval(() => {
+            loadProgress += 1;
+            loadingText.textContent = `${loadProgress}%`;
+
+            if (loadProgress === 101) {
+                clearInterval(interval);
+                preloader.style.display = 'none';
+                content.style.display = 'block';
+            }
+        }, 20); // Adjust the speed of the preloader here
+    };
+
+    simulateLoading();
 
     document.addEventListener("click", function() {
         const currentSlide = slider.querySelector(".slide:not(.exiting)");
@@ -33,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const newSlideImg1 = document.createElement("div");
         newSlideImg1.className = "slide-img slide-img-1";
         const img1 = document.createElement("img");
-        img1.src = `${imagePath}slider-${activeSlide + 1}-1.webp`; // Example: ./assets/slider-1-1.jpg
+        img1.src = `${imagePath}slider-${activeSlide + 1}-1.webp`;
         img1.style.top = "100%";
         newSlideImg1.appendChild(img1);
         newSlide.appendChild(newSlideImg1);
@@ -46,14 +67,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const newSlideImg2 = document.createElement("div");
         newSlideImg2.className = "slide-img slide-img-2";
         const img2 = document.createElement("img");
-        img2.src = `${imagePath}slider-${activeSlide + 1}-2.webp`; // Example: ./assets/slider-1-2.jpg
+        img2.src = `${imagePath}slider-${activeSlide + 1}-2.webp`;
         img2.style.top = "100%";
         newSlideImg2.appendChild(img2);
         newSlide.appendChild(newSlideImg2);
 
         slider.appendChild(newSlide);
-
-
 
         gsap.to(newSlide, {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",

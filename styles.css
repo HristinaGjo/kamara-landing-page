@@ -46,24 +46,24 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #000; /* Adjust color as needed */
+    right: 0;
+    bottom: 0;
+    background: black;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    z-index: 1000;
     color: white;
-    z-index: 1000; /* Ensure it is above all other content */
 }
 
 .preloader .logo {
-    font-size: 4em;
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 .loading-percentage {
-    margin-top: 20px;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .slider {
@@ -255,15 +255,6 @@ span{
 
     .rightCtn {
         gap: 1em; /* Adjust gap between items */
-    }
-
-    .pagination {
-        right: 20px; 
-        bottom: 140px;
-    }
-
-    .pagination .line {
-        width: 50px; /* Adjust width */
     }
 
     .description {
