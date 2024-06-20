@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-
     const sliderContent = [
         {
             title: "Echoes",
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
             ]
         }
     ];
-
 
     let activeSlide = 0;
 
@@ -187,7 +184,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     ease: "power4.inOut"
                 });
             },
-
+            onComplete: () => {
+                removeExtraSlide(mainContent);
+            }
         });
 
         gsap.fromTo(newSlide.querySelector("h1"), {
@@ -200,3 +199,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/* const sliderContent = [
+        {
+            title: "Echoes",
+            images: [
+                "./assets/echoes-1.webp",
+                "./assets/echoes-2.webp"
+            ]
+        },
+        {
+            title: "Odyssey",
+            images: [
+                "./assets/odyssey-1.webp",
+                "./assets/odyssey-2.webp"
+            ]
+        },
+        {
+            title: "Cracker",
+            images: [
+                "./assets/cracker-1.webp",
+                "./assets/cracker-2.webp"
+            ]
+        },
+        {
+            title: "Dystopia",
+            images: [
+                "./assets/wasteland-1.webp",
+                "./assets/wasteland-2.webp"
+            ]
+        }
+    ];
+
+console.log(sliderContent[0]['images'][0])
+var penis = 
+img1 = penis.createElement('img') */
+
