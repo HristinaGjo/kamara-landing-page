@@ -2,14 +2,9 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden; 
+    overflow-y: hidden;
     background-color: black; /* Set background color for the entire page */
-}
-
-#main-content {
-    height: 100%;
-    position: relative; /* Ensure relative positioning for absolute elements */
-    overflow: hidden; /* Hide any overflowing content within the main content area */
 }
 
 .element {
@@ -96,13 +91,14 @@ img {
 
 .slide-content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top:40%
 }
 
 .slide-content h1 {
-    font-size: 12vw;
+    font-size: 8vw;
     text-transform: uppercase;
     color: white;
 }
@@ -228,27 +224,27 @@ span{
 
     .slide-content {
         position: absolute;
-        top: 45%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 
     .slide-img img {
         position: absolute;
-        top: 43%;
+        top: 50%;
         transform: translateY(-43%);
         width: 250px;
         height: 600px;
     }
     
     .slide-img-1 {
-        top: 43%;
+        top: 50%;
         left: 50%;
         transform: translate(-43%, -50%) rotate(-20deg);
     }
     
     .slide-img-2 {
-        top: 43%;
+        top: 50%;
         left: 50%;
         transform: translate(-43%, -50%) rotate(20deg);
     }
@@ -277,7 +273,7 @@ span{
     }
 
     .slide-content h1 {
-        font-size: 3.8em; /* Adjust font size */
+        font-size: 3em; /* Adjust font size */
     }
 
     .slide-img {

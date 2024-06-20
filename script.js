@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const sliderContent = [
-        "Echoes",
-        "Odyssey",
-        "Cracker",
-        "Dystopia"
+        "01-Echoes",
+        "02-Odyssey",
+        "03-Cracker",
+        "04-Dystopia"
     ];
 
     const slider = document.querySelector(".slider");
